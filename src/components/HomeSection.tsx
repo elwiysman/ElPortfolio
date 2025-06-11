@@ -1,5 +1,5 @@
 import React from "react";
-import LProfil from "../images/LProfil.jpg";
+import L from "../images/L.jpg";
 
 interface HomeSectionProps {
   typedText: string;
@@ -47,7 +47,7 @@ const HomeSection: React.FC<HomeSectionProps> = ({
             <div className="relative w-48 h-48 sm:w-64 sm:h-64">
               <div className="absolute inset-0 bg-gradient-to-br from-[#87CEEB] to-[#FFB6C1] rounded-full opacity-20 animate-pulse"></div>
               <img
-                src={LProfil}
+                src={L}
                 alt="Immanuel Wiysman Pasaribu"
                 className="absolute inset-0 w-full h-full object-cover rounded-full shadow-lg border-4 border-white"
               />
@@ -102,7 +102,7 @@ const HomeSection: React.FC<HomeSectionProps> = ({
           <div className="relative w-64 h-64 md:w-80 md:h-80">
             <div className="absolute inset-0 bg-gradient-to-br from-[#87CEEB] to-[#FFB6C1] rounded-full opacity-20 animate-pulse"></div>
             <img
-              src={LProfil}
+              src={L}
               alt="Immanuel Wiysman Pasaribu"
               className="absolute inset-0 w-full h-full object-cover rounded-full shadow-lg border-4 border-white"
             />
