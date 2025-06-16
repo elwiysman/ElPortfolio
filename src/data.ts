@@ -1,11 +1,23 @@
 export const projects = [
   {
-    id: 1,
+    id: "1", // Changed from number to string for consistency
     title: "MATHSV",
     description:
       "Sebuah aplikasi web kalkulator matematika canggih yang tidak hanya menghitung, tetapi juga menyediakan langkah-langkah penyelesaian, visualisasi grafik, dan mendukung berbagai operasi matematika dari aritmatika dasar hingga kalkulus dan trigonometri. Dirancang untuk memudahkan belajar dan memahami konsep matematika kompleks.",
     image: "proyek1.jpg",
     techStack: ["CSS", "JavaScript", "Python", "Flask", "SymPy"],
+    repoLink: "https://github.com/elwiysman/MATHSV", // Added missing properties
+    liveDemo: "https://mathsv-demo.vercel.app", // You can update this URL
+  },
+  {
+    id: "2",
+    title: "AstroEdu",
+    description:
+      "An interactive educational website about the solar system, featuring planet info, orbits, satellites, facts, and quizzes.",
+    techStack: ["React", "TypeScript", "Framer Motion", "Tailwind", "Three"],
+    image: "proyek2.jpg",
+    repoLink: "https://github.com/elwiysman/AstroEdu",
+    liveDemo: "https://elwiysman.github.io/AstroEdu/",
   },
 ];
 

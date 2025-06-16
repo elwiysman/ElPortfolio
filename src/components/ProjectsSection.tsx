@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { projects } from "../data";
 import type { Project } from "../types";
 import proyek1Image from "../images/proyek1.jpg";
+import proyek2Image from "../images/proyek2.jpg";
 
 interface ProjectsSectionProps {
   openModal: (project: Project) => void;
@@ -9,6 +10,18 @@ interface ProjectsSectionProps {
 
 const ProjectsSection: React.FC<ProjectsSectionProps> = ({ openModal }) => {
   const [currentProject, setCurrentProject] = useState(0);
+
+  // Function to get the correct image based on project id
+  const getProjectImage = (projectId: string) => {
+    switch (projectId) {
+      case "1":
+        return proyek1Image;
+      case "2":
+        return proyek2Image;
+      default:
+        return proyek1Image;
+    }
+  };
 
   return (
     <section
@@ -40,7 +53,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ openModal }) => {
                     <div className="relative overflow-hidden h-64">
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                       <img
-                        src={proyek1Image}
+                        src={getProjectImage(project.id)}
                         alt={project.title}
                         className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500"
                       />
@@ -110,7 +123,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ openModal }) => {
                 prev > 0 ? prev - 1 : projects.length
               )
             }
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-[#1E3D59] hover:bg-gray-50 transition-colors duration-300 !rounded-button whitespace-nowrap"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-[#1E3D59] hover:bg-gray-50 transition-colors duration-300"
           >
             <i className="fa-solid fa-chevron-left"></i>
           </button>
@@ -120,7 +133,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ openModal }) => {
                 prev < projects.length ? prev + 1 : 0
               )
             }
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-[#1E3D59] hover:bg-gray-50 transition-colors duration-300 !rounded-button whitespace-nowrap"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-[#1E3D59] hover:bg-gray-50 transition-colors duration-300"
           >
             <i className="fa-solid fa-chevron-right"></i>
           </button>
@@ -131,7 +144,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ openModal }) => {
                 onClick={() => setCurrentProject(index)}
                 className={`w-3 h-3 rounded-full transition-colors duration-300 ${
                   currentProject === index ? "bg-[#87CEEB]" : "bg-gray-300"
-                } !rounded-button whitespace-nowrap`}
+                }`}
               />
             ))}
           </div>

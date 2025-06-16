@@ -1,9 +1,11 @@
 export interface Project {
-  id: number;
+  id: string;
   title: string;
   description: string;
-  image: string;
   techStack: string[];
+  image: string;
+  repoLink: string;
+  liveDemo: string;
 }
 
 export interface Expertise {
