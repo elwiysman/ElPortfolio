@@ -7,7 +7,7 @@ export const projects = [
     image: "proyek1.jpg",
     techStack: ["CSS", "JavaScript", "Python", "Flask", "SymPy"],
     repoLink: "https://github.com/elwiysman/MATHSV",
-    liveDemo: "https://mathsv-demo.vercel.app",
+    liveDemo: "https://elwiysman.github.io/MATHSV",
   },
   {
     id: "2",
